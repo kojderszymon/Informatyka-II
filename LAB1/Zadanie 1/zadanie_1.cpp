@@ -8,8 +8,7 @@ void printArray(int arr[], int n) {
     cout << endl;
 }  
 
-void insertionSort(int arr[], int n)  
-{  
+void insertionSort(int arr[], int n) {  
     int i, key, j;  
     for (i = 1; i < n; i++) {
         key = arr[i];  
