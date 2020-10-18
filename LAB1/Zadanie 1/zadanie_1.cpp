@@ -29,6 +29,9 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < argc - 1; i++)
         tab[i] = atoi(argv[i + 1]);
 
+    cout << "in = ";
+    printArray(tab, argc - 1);
+
     insertionSort(tab, argc - 1);
 	
     cout << "out = ";
