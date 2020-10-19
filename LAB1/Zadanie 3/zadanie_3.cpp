@@ -15,21 +15,21 @@ int main(int argc, char *argv[]) {
     bmi = (height) / (weight * weight);
 
     if(bmi < 16)
-        cout << "Wyglodzenie" << endl;
+        cout << "Wyglodzenie - BMI = " << bmi << endl;
     else if(bmi >= 16 && bmi < 17)
-        cout << "Wychudzenie" << endl;
+        cout << "Wychudzenie - BMI = " << bmi << endl;
     else if(bmi >= 17 && bmi < 18.5)
-        cout << "Niedowaga" << endl;
+        cout << "Niedowaga - BMI = " << bmi << endl;
     else if(bmi >= 18.5 && bmi < 25)
-        cout << "Wartosc prawidlowa" << endl;
+        cout << "Wartosc prawidlowa - BMI = " << bmi << endl;
     else if(bmi >= 25 && bmi < 30)
-        cout << "Nadwaga" << endl;
+        cout << "Nadwaga - BMI = " << bmi << endl;
     else if(bmi >= 30 && bmi < 35)
-        cout << "I stopien otylosci" << endl;
+        cout << "I stopien otylosci - BMI = " << bmi << endl;
     else if(bmi >= 35 && bmi < 40)
-        cout << "II stopien otylosci" << endl;
+        cout << "II stopien otylosci - BMI = " << bmi << endl;
     else if(bmi >= 40)
-        cout << "Skrajna otylosc" << endl;
+        cout << "Skrajna otylosc - BMI = " << bmi << endl;
     
     return 0;
 }
