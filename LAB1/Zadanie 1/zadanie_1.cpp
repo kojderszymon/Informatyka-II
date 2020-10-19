@@ -2,15 +2,14 @@
 using namespace std;
 
 void printArray(int arr[], int n) {  
-    int i;  
-    for (i = 0; i < n; i++)  
+    for (int i = 0; i < n; i++)  
         cout << arr[i] << " ";  
     cout << endl;
 }  
 
 void insertionSort(int arr[], int n) {  
-    int i, key, j;  
-    for (i = 1; i < n; i++) {
+    int key, j;  
+    for (int i = 1; i < n; i++) {
         key = arr[i];  
         j = i - 1;  
 
