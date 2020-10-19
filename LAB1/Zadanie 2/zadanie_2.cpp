@@ -14,9 +14,9 @@ int main(int argc, char *argv[]) {
         }
     
     if(is_palindrome == 1)
-        cout << "Podany wyraz: " << palindrome << " jest palindromem" << endl;
+        cout << "Podany wyraz: \'" << palindrome << "\' jest palindromem" << endl;
     else if(is_palindrome == 0)
-        cout << "Podany wyraz: " << palindrome << " nie jest palindromem" << endl;
+        cout << "Podany wyraz: \'" << palindrome << "\' nie jest palindromem" << endl;
 
     return 0;
 }

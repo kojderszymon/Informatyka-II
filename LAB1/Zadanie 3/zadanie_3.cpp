@@ -6,10 +6,10 @@ int main(int argc, char *argv[]) {
     float height, weight; // masa_ciala [kg], wzrost [m]
     float bmi;
 
-    cout << "Podaj wage: ";
+    cout << "Podaj wage [kg]: ";
     cin >> height;
 
-    cout << "Podaj wzrost: ";
+    cout << "Podaj wzrost [m]: ";
     cin >> weight;
 
     bmi = (height) / (weight * weight);
