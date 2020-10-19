@@ -18,13 +18,12 @@ int main(int argc, char *argv[]) {
 
     srand(time(NULL));
 
-    for(int i = 0; i < 2; i++) {
+    for(int i = 0; i < 2; i++)
         for(int j = 0; j < 3; j++) {
             matrix_1[i][j] = rand() % 40 + 10;
             matrix_2[i][j] = rand() % 40 + 10;
             result[i][j] = matrix_1[i][j] + matrix_2[i][j];
         }
-    }
     
     printRecord(matrix_1, 0);
     cout << "+";
