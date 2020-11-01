@@ -1,15 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void my_swap(int **number1, int **number2) {
-    int *temp = *number1;
+void my_swap(int** number1, int** number2) {
+    int* temp = *number1;
     *number1 = *number2;
     *number2 = temp;
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 
-    int *number1, *number2;
+    int* number1 = new int;
+    int* number2 = new int;
     *number1 = 10;
     *number2 = 45;
 
