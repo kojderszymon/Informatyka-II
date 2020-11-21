@@ -23,9 +23,11 @@ Matrix::Matrix(int n, int m) {
     }
 }
 
-//Matrix::Matrix(std::string filename) {
-
-//}
+Matrix::Matrix(std::string filename) {
+    row = 1;
+    col = 2;
+    //to
+}
 
 Matrix::~Matrix() {
     for(int i = 0; i < row; i++)
@@ -64,7 +66,7 @@ Matrix Matrix::add(Matrix matrix_2) {
 Matrix Matrix::substract(Matrix matrix_2) {
     if((row != matrix_2.row) || (col != matrix_2.col)) {
         std::cout << "Niepoprawne dane" << std::endl;
-        exit(3);
+        exit(4);
     }
     Matrix result(row, col);
     for(int i = 0; i < row; i++)
@@ -74,8 +76,21 @@ Matrix Matrix::substract(Matrix matrix_2) {
 }
 
 Matrix Matrix::multiply(Matrix matrix_2) {
-    row =row;
-    return matrix_2;
+    if(col != matrix_2.row) {
+        std::cout << "Niepoprawne dane" << std::endl;
+        exit(5);
+    }
+    Matrix result(row, matrix_2.col);
+    double sum;
+    for(int i = 0; i < row; i++)
+        for(int j = 0; j < matrix_2.col; j++) {
+            sum = 0;
+            for(int k = 0; k < col; k++) {
+                sum += value[i][k] * matrix_2.value[k][j];
+                result.value[i][j] = sum;
+            }
+        }
+    return result;
 }
 
 int Matrix::cols() {
@@ -95,9 +110,11 @@ void Matrix::print() {
 }
 
 void Matrix::store(std::string filename, std::string path) {
+    //to
     std::fstream file;
     file.open(filename, std::ios::out);
     if(file.good() == true ) {
+        file << row << "x" << col << std::endl;
         for(int i = 0; i < col; i++) {
             for(int j = 0; j < row; j++)
                 file << value[i][j] << " ";
@@ -109,4 +126,5 @@ void Matrix::store(std::string filename, std::string path) {
 
 int Matrix::main() {
     return row;
+    //to
 }
