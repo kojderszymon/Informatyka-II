@@ -6,7 +6,7 @@ class Matrix {
         int col; //numer kolumny - M (0 - m-1)
         double **value; //wartosci rzeczywiste
     public:
-        void set(int n, int m, double val);
+        bool set(int n, int m, double val);
         double get(int n, int m);
         Matrix add(Matrix matrix_2);
         Matrix substract(Matrix matrix_2);
@@ -14,7 +14,7 @@ class Matrix {
         int cols();
         int rows();
         void print();
-        void store(std::string filename, std::string path);
+        bool store(std::string filename, std::string path);
 
     Matrix(int x);
     Matrix(int x, int y);
