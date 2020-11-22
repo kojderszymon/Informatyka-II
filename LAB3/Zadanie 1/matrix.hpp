@@ -15,7 +15,6 @@ class Matrix {
         int rows();
         void print();
         void store(std::string filename, std::string path);
-        int main();
 
     Matrix(int x);
     Matrix(int x, int y);
