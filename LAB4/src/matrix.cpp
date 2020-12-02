@@ -1,4 +1,4 @@
-#include <LAB4/matrix.hpp>
+#include "..\include\LAB4\matrix.hpp"
 
 Matrix::Matrix(int n) {
     row = n;

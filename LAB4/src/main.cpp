@@ -1,4 +1,4 @@
-#include <LAB4/matrix.hpp>
+#include "matrix.cpp"
 
 int main(int argc, char *argv[]) {
     std::cout << "Tworze macierz 4x4 (matrix_1)" << std::endl;
