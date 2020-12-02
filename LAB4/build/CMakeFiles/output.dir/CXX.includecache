@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-../include/LAB4/matrix.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB4/include/LAB4/matrix.hpp
 iostream
 -
 fstream
 -
 
 C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB4/src/main.cpp
-LAB4/matrix.hpp
--
+matrix.cpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB4/src/matrix.cpp
 
 C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB4/src/matrix.cpp
-LAB4/matrix.hpp
--
+../include/LAB4/matrix.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB4/include/LAB4/matrix.hpp
 

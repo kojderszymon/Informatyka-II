@@ -3,6 +3,7 @@
 
 CMakeFiles/output.dir/src/main.cpp.obj: ../include/LAB4/matrix.hpp
 CMakeFiles/output.dir/src/main.cpp.obj: ../src/main.cpp
+CMakeFiles/output.dir/src/main.cpp.obj: ../src/matrix.cpp
 
 CMakeFiles/output.dir/src/matrix.cpp.obj: ../include/LAB4/matrix.hpp
 CMakeFiles/output.dir/src/matrix.cpp.obj: ../src/matrix.cpp
