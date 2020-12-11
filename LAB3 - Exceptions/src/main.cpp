@@ -17,9 +17,9 @@ int main(int argc, char *argv[]) {
     std::cout << "Ustawiam wartosc w komorce (1, 1) (matrix_3) na " << matrix_3.get(1, 1) << std::endl;
     matrix_3.print();
     std::cout << "Sume macierzy 1 i 3 zapisze do nowej zmiennej (matrix_4) i pliku" << std::endl;
-    //Matrix matrix_4 = matrix_1.add(matrix_3);
+    Matrix matrix_4 = matrix_1.add(matrix_3);
     //matrix_4.print();
-    //matrix_4.store("tekst.txt", "./Files/");
+    matrix_4.store("tekst.txt", "./Files/");
     std::cout << "Roznice macierzy 1 i 3 zapisze do zmiennej (matrix_5)" << std::endl;
     //Matrix matrix_5 = matrix_1.substract(matrix_3);
     //matrix_5.print();

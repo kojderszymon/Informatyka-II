@@ -23,22 +23,26 @@ Matrix::Matrix(int n, int m) {
 }
 
 Matrix::Matrix(std::string filename) {
-    std::fstream file;
-    file.open(filename, std::ios::in);
-    if(file.good()) {
-        file >> row;
-        file >> col;
-        value = new double * [row];
-            for(int i = 0; i < row; i++) {
-                value[i] = new double [col];
-                for(int j = 0; j < col; j++)
-                    file >> value[i][j];
-            }
-        file.close();
+    try {
+        std::fstream file;
+        file.open(filename, std::ios::in);
+        if(file.good()) {
+            file >> row;
+            file >> col;
+            value = new double * [row];
+                for(int i = 0; i < row; i++) {
+                    value[i] = new double [col];
+                    for(int j = 0; j < col; j++)
+                        file >> value[i][j];
+                }
+            file.close();
+        }
+        else {
+            throw std::runtime_error("Blad tworzenia macierzy");
+        }
     }
-    else {
-        std::cout << "Tworzenie zmiennej nie powiodlo sie" << std::endl;
-        exit(1);
+    catch(const std::exception& e) {
+        std::cerr << e.what() << std::endl;
     }
 }
 
@@ -51,7 +55,7 @@ Matrix::~Matrix() {
 bool Matrix::set(int n, int m, double val) {
     try {
         if((n < 0) || (n >= row) || (m < 0) || (m >= col))
-            throw std::runtime_error("Niepoprawne dane");
+            throw std::runtime_error("Blad ustawiania wartosci macierzy");
         value[n][m] = val;
         return true;
     }
@@ -64,7 +68,7 @@ bool Matrix::set(int n, int m, double val) {
 double Matrix::get(int n, int m) {
     try {
         if((n < 0) || (n >= row) || (m < 0) || (m >= col))
-            throw std::runtime_error("Niepoprawne dane");
+            throw std::runtime_error("Blad pobierania wartosci z macierzy");
         return value[n][m];  
     }
     catch(const std::exception& e) {
@@ -76,7 +80,7 @@ double Matrix::get(int n, int m) {
 Matrix Matrix::add(Matrix matrix_2) {
     try{
         if((row != matrix_2.row) || (col != matrix_2.col))
-            throw std::runtime_error("Niepoprawne dane");
+            throw std::runtime_error("Blad dodawania macierzy");
         Matrix result = Matrix(row, col);
         for(int i = 0; i < row; i++)
             for(int j = 0; j < col; j++)
@@ -92,7 +96,7 @@ Matrix Matrix::add(Matrix matrix_2) {
 Matrix Matrix::substract(Matrix matrix_2) {
     try{
         if((row != matrix_2.row) || (col != matrix_2.col))
-            throw std::runtime_error("Niepoprawne dane");
+            throw std::runtime_error("Blad odejmowania macierzy");
         Matrix result = Matrix(row, col);
         for(int i = 0; i < row; i++)
             for(int j = 0; j < col; j++)
@@ -108,7 +112,7 @@ Matrix Matrix::substract(Matrix matrix_2) {
 Matrix Matrix::multiply(Matrix matrix_2) {
     try{
         if(col != matrix_2.row)
-            throw std::runtime_error("Niepoprawne dane");
+            throw std::runtime_error("Blad mnozenia macierzy");
         Matrix result = Matrix(row, matrix_2.col);
         double sum;
         for(int i = 0; i < row; i++)
@@ -157,7 +161,7 @@ bool Matrix::store(std::string filename, std::string path) {
             return true;
         }
         else
-            throw std::runtime_error("Niepoprawne dane");
+            throw std::runtime_error("Blad zapisu macierzy do pliku");
     }
     catch(const std::exception& e) {
         std::cerr << e.what() << std::endl;
