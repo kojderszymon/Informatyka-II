@@ -1,0 +1,3 @@
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/build/CMakeFiles/output.dir
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/build/CMakeFiles/edit_cache.dir
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/build/CMakeFiles/rebuild_cache.dir

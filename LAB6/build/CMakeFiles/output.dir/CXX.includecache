@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/employee.hpp
+iostream
+-
+
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/hrms.hpp
+employee.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/employee.hpp
+map
+-
+vector
+-
+algorithm
+-
+
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/src/employee.cpp
+../include/LAB/employee.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/employee.hpp
+
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/src/hrms.cpp
+../include/LAB/hrms.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/hrms.hpp
+
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/src/main.cpp
+../include/LAB/employee.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/employee.hpp
+../include/LAB/hrms.hpp
+C:/Users/Szymon Kojder/Desktop/Studia/II rok/JIPP/GitHub/Informatyka-II/LAB6/include/LAB/hrms.hpp
+
