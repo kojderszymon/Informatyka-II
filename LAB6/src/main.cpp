@@ -1,36 +1,36 @@
 #include "../include/LAB/employee.hpp"
 #include "../include/LAB/hrms.hpp"
 
-int main(){
+int main() {
 
-    Employee a("A1","aa","bb","x","a");
-    Employee b("A2","cc","dd","x","a");
-    Employee c("A3","dd","ee","y","a");
-    Employee d("B1","ff","gg","x","a");
-    Employee e("B2","hh","ii","z","a");
-    Employee f("C1","jj","kk","xy","a");
-    Employee g("C2","ll","mm","z","a");
-    Employee h("D1","nn","oo","zy","a");
-    Employee i("D2","uu","pp","yz","a");
-    Employee j("D3","rr","ss","x","a");
+    Employee employee1("001","Adam","Magon","X","A");
+    Employee employee2("002","Bob","River","X","B");
+    Employee employee3("003","Anna","Tarantino","Y","B");
+    Employee employee4("004","Simon","Maguire","Z","C");
+    Employee employee5("005","Kevin","Spacey","X","A");
+    Employee employee6("006","Sam","Malsky","Q","C");
+    Employee employee7("007","Tom","Owen","Y","A");
+    Employee employee8("008","Pawel","Dadly","Q","B");
+    Employee employee9("009","Andrew","Twardowsky","Z","C");
+    Employee employee10("010","Will","Smith","Y","D");
 
-    hrms fact;
-    fact.add(a,"dep1",2500.0);
-    fact.add(b,"dep1",2600.0);
-    fact.add(c,"dep1",2800.0);
-    fact.add(d,"dep2",3000.0);
-    fact.add(e,"dep2",3500.0);
-    fact.add(f,"dep3",4500.0);
-    fact.add(g,"dep3",5500.0);
-    fact.add(h,"dep4",2500.0);
-    fact.add(i,"dep4",3500.0);
-    fact.add(j,"dep4",5500.0);
+    hrms var;
+    var.add(employee1,"X",2300.0);
+    var.add(employee2,"X",2600.0);
+    var.add(employee3,"Y",2800.0);
+    var.add(employee4,"Z",3000.0);
+    var.add(employee5,"X",2400.0);
+    var.add(employee6,"Q",5400.0);
+    var.add(employee7,"Y",5100.0);
+    var.add(employee8,"Q",4800.0);
+    var.add(employee9,"Z",4200.0);
+    var.add(employee10,"Y",3500.0);
 
-    fact.printDepartment("dep1");
-    std::cout << std::endl << std::endl;
-    fact.printSalaries();
-    std::cout << std::endl << std::endl;
-    fact.printSalariesSorted();
+    var.printDepartment("Y");
+    std::cout << std::endl;
+    var.printSalaries();
+    std::cout << std::endl;
+    var.printSalariesSorted();
 
     return 0;
 }
