@@ -9,7 +9,9 @@ void hrms::add(Employee employee, std::string departmentID, double salary) {
 }
 
 void hrms::printDepartment(std::string departmentID) {
-    std::cout << "Employees from department " << departmentID << std::endl;
+    std::cout << "*******************************" << std::endl;
+    std::cout << "* Employees from department " << departmentID << " *" << std::endl;
+    std::cout << "*******************************" << std::endl;
     for(auto &element : Departments[departmentID]) {
         std::cout << element << std::endl;
     }
@@ -20,7 +22,9 @@ void hrms::changeSalary(std::string employeeID, double salary) {
 }
         
 void hrms::printSalaries() {
-    std::cout << "List of employees" << std::endl;
+    std::cout << "*********************" << std::endl;
+    std::cout << "* List of employees *" << std::endl;
+    std::cout << "*********************" << std::endl;
     for(auto &element : this -> Salaries) {
         std::cout << "ID: " << element.first << std::endl;
         std::cout << "Name: " << AllEmployees.at(element.first).getName() << std::endl;
@@ -41,7 +45,9 @@ void hrms::printSalariesSorted() {
         return (a.second > b.second);
     });
 
-    std::cout << "Employees sorted by salary" << std::endl;
+    std::cout << "******************************" << std::endl;
+    std::cout << "* Employees sorted by salary *" << std::endl;
+    std::cout << "******************************" << std::endl;
     for(auto &element : sorted) {
         std::cout << "ID: " << element.first.getID() << std::endl;
         std::cout << "Name: " << element.first.getName() << std::endl;
