@@ -4,4 +4,4 @@ project( LAB6 )
 
 include_directories( ./include ./src )
 
-add_executable( output ./src/main.cpp ./src/employee.cpp ./src/hrms.cpp )
+add_executable( main ./src/main.cpp ./src/employee.cpp ./src/hrms.cpp )

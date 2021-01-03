@@ -32,5 +32,12 @@ int main() {
     std::cout << std::endl;
     var.printSalariesSorted();
 
+    var.changeSalary(employee7.getID(), 4500.0);
+    var.changeSalary("010", 3500.0);
+
+    var.printSalaries();
+    std::cout << std::endl;
+    var.printSalariesSorted();
+
     return 0;
 }
