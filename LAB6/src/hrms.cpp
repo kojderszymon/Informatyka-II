@@ -37,7 +37,7 @@ void hrms::printSalaries() {
         
 void hrms::printSalariesSorted() {
     std::vector <std::pair <Employee, double>> sorted;
-    for(auto &element : AllEmployees) {
+    for(auto &element : this -> AllEmployees) {
         sorted.push_back(std::make_pair(element.second, this -> Salaries[element.second.getID()]));
     }
 
