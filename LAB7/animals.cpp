@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
  
 class animals {
     private:
@@ -26,7 +25,7 @@ class cat :public animals {
             return this -> owner;
         }
         void miau() {
-            std::cout << "[ " << this -> get_name() <<" ] Miau, miau... Mam " << get_age() << " lat" << std::endl;
+            std::cout << "[ " << get_name() <<" ] Miau, miau... Mam " << get_age() << " lat" << std::endl;
         }
         cat(std::string my_owner = "Szymon", std::string my_name = "Stefan",  int my_age = 1)
         :animals(my_name, my_age) {
