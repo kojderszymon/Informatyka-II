@@ -33,8 +33,7 @@ class cat :public animals {
         }
 };
  
-int main()
-{
+int main() {
     cat kotek("Szymon", "Wyplosz", 1);
     kotek.miau();
     std::cout << kotek.get_name() << std::endl;
