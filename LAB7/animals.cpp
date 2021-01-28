@@ -37,5 +37,6 @@ int main() {
     cat kotek("Szymon", "Wyplosz", 1);
     kotek.miau();
     std::cout << kotek.get_name() << std::endl;
+    
     return 0;
 }
